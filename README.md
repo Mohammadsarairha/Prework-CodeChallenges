@@ -128,4 +128,4 @@ public static int[] SumofRows(int[,] myArray)
 
 ## Console Output image 
 
-![Console Output](./img/prop4.png.jpg)
+![Console Output](./img/prop4.png)
