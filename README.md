@@ -99,3 +99,33 @@ public static string PerfectSequences(int[] arr)
 ## Console Output image 
 
 ![Console Output](./img/prop3.png)
+
+
+## Problem 4: Sum of Rows
+
+> Create function to find sum of 2D Array . 
+
+```C#
+
+public static int[] SumofRows(int[,] myArray)
+        {
+
+            int[] sum = new int[myArray.GetLength(0)];
+            int total = 0;
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    total += myArray[i, j];
+                }
+                sum[i] = total;
+                total = 0;
+            }
+            return sum;
+        }
+
+```
+
+## Console Output image 
+
+![Console Output](./img/prop4.png.jpg)
