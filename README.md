@@ -26,3 +26,27 @@
 ![Console Output](./img/Prop1.png)
 
 ------
+
+## Problem 2: Leap Year Calculator
+
+> Create function to Calculator Leap Year (A leap year is a year with 366 days that comes every 4 years).
+
+```C#
+
+public static void LeapYear(int year)
+        {
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            {
+                Console.WriteLine($"{year} is Leap year ");
+            }
+            else
+            {
+                Console.WriteLine($"{year} is not Leap year ");
+            }
+        }
+
+```
+
+## Console Output image 
+
+![Console Output](./img/prop2.png)
