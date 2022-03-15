@@ -68,25 +68,27 @@ namespace ConsoleApp1
             return check >= 1 ? "yes" : "no";
         }
 
+        public static int[] SumofRows(int[,] myArray)
+        {
+
+            int[] sum = new int[myArray.GetLength(0)];
+            int total = 0;
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    total += myArray[i, j];
+                }
+                sum[i] = total;
+                total = 0;
+            }
+            return sum;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Please chosee number");
-            int size = Convert.ToInt32(Console.ReadLine());
-            int[] arr = new int[size];
-            for (int i = 0; i < size; i++)
-            {
-                Console.WriteLine($"Please enter number  {i + 1} / {arr.Length}");
-                arr[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine(string.Join(",", arr));
-            if(PerfectSequences(arr) == "yes")
-            {
-                Console.WriteLine("Yes Its Perfect Sequences");
-            }
-            else
-            {
-                Console.WriteLine("Its not Perfect Sequences");
-            }
+            int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+            Console.WriteLine($"Sum = {string.Join(",", SumofRows(myArray))}");
 
         }
     }
