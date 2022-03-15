@@ -50,3 +50,52 @@ public static void LeapYear(int year)
 ## Console Output image 
 
 ![Console Output](./img/prop2.png)
+
+------
+
+## Problem 3: Perfect Sequence
+
+> Create function to find perfect sequence (perfect sequence is sum of all element and sum must divisible by all element).
+
+```C#
+
+public static string PerfectSequences(int[] arr)
+        {
+            int sum = 0;
+            int check = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] >= 0)
+                {
+                    sum += arr[i];
+                }
+                else
+                {
+                    return "no";
+                }
+            }
+            if (sum == 0)
+            {
+                return "yes";
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i] == 0){
+                    continue;
+                }else if (sum % arr[i] == 0)
+                {
+                    check += 1;
+                }
+                else
+                {
+                    return "no";
+                }
+            }
+            return check >= 1 ? "yes" : "no";
+        }
+
+```
+
+## Console Output image 
+
+![Console Output](./img/prop3.png)
